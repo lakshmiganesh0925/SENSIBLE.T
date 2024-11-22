@@ -2,10 +2,8 @@
 
 const { Sequelize } = require('sequelize');
 
-const sequelize = new Sequelize({
-  dialect: 'sqlite',
-  storage: 'path/to/database.sqlite'
-});
+const sequelize = new Sequelize('mysql://user:password@localhost:3306/transaction_db', { dialect: 'mysql' });
+
 
 sequelize.authenticate()
     .then(() => console.log('Database connected...'))
