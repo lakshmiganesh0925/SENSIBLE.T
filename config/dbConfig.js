@@ -2,9 +2,9 @@
 
 const { Sequelize } = require('sequelize');
 
-const sequelize = new Sequelize('transaction_db', 'root', 'GaneshReddy', {
-    host: 'localhost',
-    dialect: 'mysql', // Use MySQL database
+const sequelize = new Sequelize({
+  dialect: 'sqlite',
+  storage: 'path/to/database.sqlite'
 });
 
 sequelize.authenticate()
